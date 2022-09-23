@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/22 19:16:50.000.275,=rtl.dcp</Transaction>
+    <Transaction>2022/09/22 19:17:16.000.271,C:\Users\tiago\OneDrive\Documentos\Embarcadero\Studio\Projects\FBRepair.dproj=C:\Users\tiago\OneDrive\Documentos\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2022/09/22 19:18:21.000.466,=C:\Users\tiago\Dropbox\Componentes\DTFBRepair\DTFBRepair.pas</Transaction>
+    <Transaction>2022/09/22 19:18:37.000.639,C:\Users\tiago\Dropbox\Componentes\DTFBRepair\FBRepair.dproj=C:\Users\tiago\OneDrive\Documentos\Embarcadero\Studio\Projects\FBRepair.dproj</Transaction>
+    <Transaction>2022/09/23 08:19:14.000.583,=vcl.dcp</Transaction>
+  </Transactions>
+</BorlandProject>

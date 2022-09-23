@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F4FDD413-506C-4E48-AF4F-D773E87DE17C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FBRepair.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo\Demo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FBRepair">
+        <MSBuild Projects="FBRepair.dproj"/>
+    </Target>
+    <Target Name="FBRepair:Clean">
+        <MSBuild Projects="FBRepair.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FBRepair:Make">
+        <MSBuild Projects="FBRepair.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Demo">
+        <MSBuild Projects="Demo\Demo.dproj"/>
+    </Target>
+    <Target Name="Demo:Clean">
+        <MSBuild Projects="Demo\Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Demo:Make">
+        <MSBuild Projects="Demo\Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FBRepair;Demo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FBRepair:Clean;Demo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FBRepair:Make;Demo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
